@@ -17,16 +17,28 @@ namespace ConsumoEnergetico
             InitializeComponent();
         }
 
-        private void medicionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.pnlPrincipal.Controls.Clear();
-            this.pnlPrincipal.Controls.Add(new ucMedicion());
-        }
-
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.pnlPrincipal.Controls.Clear();
             this.pnlPrincipal.Controls.Add(new ucConsumo());
+        }
+
+        private void aguaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            this.pnlPrincipal.Controls.Add(new ucMedicionAgua());
+        }
+
+        private void electricidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            this.pnlPrincipal.Controls.Add(new ucMedicionElectricidad());
+        }
+
+        private void gasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            this.pnlPrincipal.Controls.Add(new ucMedicionGas());
         }
     }
 }

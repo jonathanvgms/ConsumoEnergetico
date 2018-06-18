@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMedidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedidor.Designer.cs">
+      <DependentUpon>frmMedidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frnInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,12 +68,33 @@
     <Compile Include="ucConsumo.Designer.cs">
       <DependentUpon>ucConsumo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucMedicionGas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMedicionGas.Designer.cs">
+      <DependentUpon>ucMedicionGas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMedicionElectricidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMedicionElectricidad.Designer.cs">
+      <DependentUpon>ucMedicionElectricidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMedicionAgua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMedicionAgua.Designer.cs">
+      <DependentUpon>ucMedicionAgua.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucMedicion.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucMedicion.Designer.cs">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmMedidor.resx">
+      <DependentUpon>frmMedidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frnInicial.resx">
       <DependentUpon>frnInicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +109,15 @@
     </Compile>
     <EmbeddedResource Include="ucConsumo.resx">
       <DependentUpon>ucConsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMedicionGas.resx">
+      <DependentUpon>ucMedicionGas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMedicionElectricidad.resx">
+      <DependentUpon>ucMedicionElectricidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMedicionAgua.resx">
+      <DependentUpon>ucMedicionAgua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMedicion.resx">
       <DependentUpon>ucMedicion.cs</DependentUpon>
