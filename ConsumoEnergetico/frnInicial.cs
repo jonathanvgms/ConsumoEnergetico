@@ -40,5 +40,28 @@ namespace ConsumoEnergetico
             this.pnlPrincipal.Controls.Clear();
             this.pnlPrincipal.Controls.Add(new ucMedicionGas());
         }
+
+        private void mensualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            this.pnlPrincipal.Controls.Add(new ucConsumoMensual());
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe frmAcerca = new frmAcercaDe();
+            frmAcerca.ShowDialog(this);
+        }
+
+        private void manualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            this.pnlPrincipal.Controls.Add(new ucManual());
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMedidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,18 @@
     </Compile>
     <Compile Include="ucConsumo.Designer.cs">
       <DependentUpon>ucConsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsumoMensual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsumoMensual.Designer.cs">
+      <DependentUpon>ucConsumoMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucManual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManual.Designer.cs">
+      <DependentUpon>ucManual.cs</DependentUpon>
     </Compile>
     <Compile Include="ucMedicionGas.cs">
       <SubType>UserControl</SubType>
@@ -92,6 +110,9 @@
     <Compile Include="ucMedicion.Designer.cs">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMedidor.resx">
       <DependentUpon>frmMedidor.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +130,12 @@
     </Compile>
     <EmbeddedResource Include="ucConsumo.resx">
       <DependentUpon>ucConsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsumoMensual.resx">
+      <DependentUpon>ucConsumoMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucManual.resx">
+      <DependentUpon>ucManual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMedicionGas.resx">
       <DependentUpon>ucMedicionGas.cs</DependentUpon>
@@ -135,6 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\kisspng-computer-icons-molecule-molecular-term-symbol-molecular-vector-5adff91ad681d1.9591316415246277388786.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

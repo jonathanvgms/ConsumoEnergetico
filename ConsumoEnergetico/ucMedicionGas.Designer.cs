@@ -41,8 +41,8 @@
             this.btnNuevoMedidor = new System.Windows.Forms.Button();
             this.cboMedidor = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -188,6 +188,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Medición Gas";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(464, 69);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 52);
+            this.textBox1.TabIndex = 12;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -196,14 +204,6 @@
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Detalle";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(464, 69);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 52);
-            this.textBox1.TabIndex = 12;
             // 
             // ucMedicionGas
             // 
