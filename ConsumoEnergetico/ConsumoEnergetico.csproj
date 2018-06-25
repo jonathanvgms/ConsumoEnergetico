@@ -54,6 +54,12 @@
     <Compile Include="frmAcercaDe.Designer.cs">
       <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditarMedicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarMedicion.Designer.cs">
+      <DependentUpon>frmEditarMedicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMedidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,32 +92,18 @@
     <Compile Include="ucManual.Designer.cs">
       <DependentUpon>ucManual.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMedicionGas.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucMedicionGas.Designer.cs">
-      <DependentUpon>ucMedicionGas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucMedicionElectricidad.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucMedicionElectricidad.Designer.cs">
-      <DependentUpon>ucMedicionElectricidad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucMedicionAgua.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucMedicionAgua.Designer.cs">
-      <DependentUpon>ucMedicionAgua.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucMedicion.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucMedicion.Designer.cs">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="UtilGui.cs" />
     <EmbeddedResource Include="frmAcercaDe.resx">
       <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarMedicion.resx">
+      <DependentUpon>frmEditarMedicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMedidor.resx">
       <DependentUpon>frmMedidor.cs</DependentUpon>
@@ -137,15 +129,6 @@
     <EmbeddedResource Include="ucManual.resx">
       <DependentUpon>ucManual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucMedicionGas.resx">
-      <DependentUpon>ucMedicionGas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucMedicionElectricidad.resx">
-      <DependentUpon>ucMedicionElectricidad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucMedicionAgua.resx">
-      <DependentUpon>ucMedicionAgua.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucMedicion.resx">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,9 +146,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ConsumoEnergetico.Biblioteca\ConsumoEnergetico.Biblioteca.csproj">
+      <Project>{895e7f12-ddc2-4cf8-a9ae-91838d4b86e4}</Project>
+      <Name>ConsumoEnergetico.Biblioteca</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\kisspng-computer-icons-molecule-molecular-term-symbol-molecular-vector-5adff91ad681d1.9591316415246277388786.ico" />
+    <Content Include="Assets\portada.png" />
+    <Content Include="Assets\portada3.png" />
+    <Content Include="Assets\portada4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

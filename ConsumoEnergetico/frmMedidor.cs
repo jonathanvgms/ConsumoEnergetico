@@ -7,14 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LiteDB;
+using ConsumoEnergetico.Biblioteca;
 
 namespace ConsumoEnergetico
 {
     public partial class frmMedidor : Form
     {
-        public frmMedidor()
+        private string indicador;
+        private LiteDatabase db;
+
+        public frmMedidor(LiteDatabase db, string indicador)
         {
             InitializeComponent();
+            this.indicador = indicador;
+            this.db = db;
+        }
+
+        private void btnGuardarMedidor_Click(object sender, EventArgs e)
+        {
+            var medidoresAgua = db.GetCollection<Medidor>(UtilGui.GetStrMedidores(indicador));
+            medidoresAgua.Insert(new Medidor
+            {
+                Codigo = txtCodigo.Text,
+                Descripcion = txtDescripcion.Text
+            });
+            Close();
         }
     }
 }

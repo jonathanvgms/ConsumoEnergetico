@@ -8,7 +8,7 @@ namespace ConsumoEnergetico.Biblioteca
 {
     public class Medicion
     {
-        public EIndicador Indicador { get; set; }
+        public int Id { get; set; }
 
         public Medidor Medidor { get; set; }
 
@@ -20,7 +20,9 @@ namespace ConsumoEnergetico.Biblioteca
 
         public Medicion()
         {
-            
+            Id = 0;
+            Dato = 0;
+            Detalle = String.Empty;
         }
     }
 }
