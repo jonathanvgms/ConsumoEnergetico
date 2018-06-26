@@ -26,6 +26,12 @@ namespace ConsumoEnergetico
 
         private void btnGuardarMedidor_Click(object sender, EventArgs e)
         {
+            if(Util.cadenaVacia(txtCodigo.Text))
+            {
+                MessageBox.Show("El texto no es valido, por favor ingrese un codigo");
+                return;
+            }
+
             var medidoresAgua = db.GetCollection<Medidor>(UtilGui.GetStrMedidores(indicador));
             medidoresAgua.Insert(new Medidor
             {

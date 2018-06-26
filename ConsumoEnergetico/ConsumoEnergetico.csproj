@@ -98,6 +98,7 @@
     <Compile Include="ucMedicion.Designer.cs">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <Compile Include="UtilGui.cs" />
     <EmbeddedResource Include="frmAcercaDe.resx">
       <DependentUpon>frmAcercaDe.cs</DependentUpon>
