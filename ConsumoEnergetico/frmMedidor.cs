@@ -28,7 +28,7 @@ namespace ConsumoEnergetico
         {
             if(Util.cadenaVacia(txtCodigo.Text))
             {
-                MessageBox.Show("El texto no es valido, por favor ingrese un codigo");
+                MessageBox.Show("El código es invalido. Ingrese uno nuevo.");
                 return;
             }
 
