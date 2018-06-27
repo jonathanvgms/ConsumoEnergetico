@@ -70,27 +70,27 @@ namespace ConsumoEnergetico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-        if ( string.IsNullOrEmpty(txtDatoMedicion.Text) && cboMedidor.SelectedIndex < 0)
-        {
-            MessageBox.Show("El campo 'Medidior' esta vacio y el campo 'Dato' esta vacio. Intente de nuevo");
-            return;
-        }
-        else
-        {
-            if (cboMedidor.SelectedIndex < 0)
+            if (string.IsNullOrEmpty(txtDatoMedicion.Text) && cboMedidor.SelectedIndex < 0)
             {
-                MessageBox.Show("El codigo es invalido. Intente de nuevo");
+                MessageBox.Show("El campo 'Medidior' esta vacio y el campo 'Consumo' esta vacio. Intente de nuevo");
                 return;
             }
             else
             {
-                if (string.IsNullOrEmpty(txtDatoMedicion.Text))
+                if (cboMedidor.SelectedIndex < 0)
                 {
-                    MessageBox.Show("El campo 'Dato' esta vacio");
+                    MessageBox.Show("El campo 'Medidor' es invalido. Intente de nuevo");
                     return;
                 }
+                else
+                {
+                    if (string.IsNullOrEmpty(txtDatoMedicion.Text))
+                    {
+                        MessageBox.Show("El campo 'Consumo' esta vacio");
+                        return;
+                    }
+                }
             }
-        }
 
             medicion.Medidor = (Medidor)cboMedidor.SelectedItem;
             medicion.Dato = Convert.ToDouble(txtDatoMedicion.Text);

@@ -42,6 +42,29 @@ namespace ConsumoEnergetico
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             var mediciones = db.GetCollection<Medicion>(UtilGui.GetStrMediciones(indicador));
+
+            if (string.IsNullOrEmpty(txtDatoMedicion.Text) && cboMedidor.SelectedIndex < 0)
+            {
+                MessageBox.Show("El campo 'Medidior' esta vacio y el campo 'Consumo' esta vacio. Intente de nuevo");
+                return;
+            }
+            else
+            {
+                if (cboMedidor.SelectedIndex < 0)
+                {
+                    MessageBox.Show("El campo 'Medidor' es invalido. Intente de nuevo");
+                    return;
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(txtDatoMedicion.Text))
+                    {
+                        MessageBox.Show("El campo 'Consumo' esta vacio");
+                        return;
+                    }
+                }
+            }
+
             mediciones.Insert(new Medicion
             {
                 Medidor = (Medidor)cboMedidor.SelectedItem,
