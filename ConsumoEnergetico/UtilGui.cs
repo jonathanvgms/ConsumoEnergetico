@@ -1,10 +1,7 @@
 ﻿using ConsumoEnergetico.Biblioteca;
 using LiteDB;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ConsumoEnergetico
@@ -47,16 +44,30 @@ namespace ConsumoEnergetico
             return String.Empty;
         }
 
+        public static string GetStrCostos(string indicador)
+        {
+            if (indicador == "agua")
+                return "costosAgua";
+
+            if (indicador == "gas")
+                return "costosGas";
+
+            if (indicador == "electricidad")
+                return "costosElectricidad";
+
+            return String.Empty;
+        }
+
         public static string GetUnidad(string indicador)
         {
             if (indicador == "agua")
                 return "M3";
 
             if (indicador == "gas")
-                return "Lts";
+                return "M3";
 
             if (indicador == "electricidad")
-                return "Kw";
+                return "KW";
 
             return String.Empty;
         }

@@ -98,6 +98,12 @@
     <Compile Include="ucMedicion.Designer.cs">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucValorEnergetico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucValorEnergetico.Designer.cs">
+      <DependentUpon>ucValorEnergetico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="UtilGui.cs" />
     <EmbeddedResource Include="frmAcercaDe.resx">
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucMedicion.resx">
       <DependentUpon>ucMedicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucValorEnergetico.resx">
+      <DependentUpon>ucValorEnergetico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

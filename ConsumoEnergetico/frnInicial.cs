@@ -114,5 +114,29 @@ namespace ConsumoEnergetico
                 pnlPrincipal.Controls.Clear();
             }            
         }
+
+        private void aguaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pnlPrincipal.Controls.Clear();
+            ucValorEnergetico ucAgua = new ucValorEnergetico("agua", db);
+            pnlPrincipal.Controls.Add(ucAgua);
+            ucAgua.Location = new Point(ClientSize.Width / 2 - ucAgua.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - ucAgua.Size.Height / 2 - altoBarraTitulo);
+        }
+
+        private void electricidadToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pnlPrincipal.Controls.Clear();
+            ucValorEnergetico ucElectricidad = new ucValorEnergetico("electricidad", db);
+            pnlPrincipal.Controls.Add(ucElectricidad);
+            ucElectricidad.Location = new Point(ClientSize.Width / 2 - ucElectricidad.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - ucElectricidad.Size.Height / 2 - altoBarraTitulo);
+        }
+
+        private void gasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pnlPrincipal.Controls.Clear();
+            ucValorEnergetico ucGas = new ucValorEnergetico("gas", db);
+            pnlPrincipal.Controls.Add(ucGas);
+            ucGas.Location = new Point(ClientSize.Width / 2 - ucGas.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - ucGas.Size.Height / 2 - altoBarraTitulo);
+        }
     }
 }

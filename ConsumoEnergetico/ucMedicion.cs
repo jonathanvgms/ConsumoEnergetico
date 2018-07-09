@@ -98,7 +98,6 @@ namespace ConsumoEnergetico
                 columnBorrar.UseColumnTextForButtonValue = true;
                 dgvHistorialAgua.Columns.Add(columnBorrar);
 
-
                 dgvHistorialAgua.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
                 dgvHistorialAgua.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvHistorialAgua.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;

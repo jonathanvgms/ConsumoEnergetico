@@ -32,8 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planillaExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aguaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +40,10 @@
             this.resultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aguaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.electricidadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
@@ -58,6 +60,7 @@
             this.archivoToolStripMenuItem,
             this.medicionToolStripMenuItem,
             this.resultadosToolStripMenuItem,
+            this.valorToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -70,7 +73,6 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abrirToolStripMenuItem,
-            this.exportarToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
@@ -82,20 +84,6 @@
             this.abrirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abrirToolStripMenuItem.Text = "Importar";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
-            // 
-            // exportarToolStripMenuItem
-            // 
-            this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.planillaExcelToolStripMenuItem});
-            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exportarToolStripMenuItem.Text = "Exportar";
-            // 
-            // planillaExcelToolStripMenuItem
-            // 
-            this.planillaExcelToolStripMenuItem.Name = "planillaExcelToolStripMenuItem";
-            this.planillaExcelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.planillaExcelToolStripMenuItem.Text = "Planilla excel";
             // 
             // salirToolStripMenuItem
             // 
@@ -157,6 +145,37 @@
             this.mensualToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.mensualToolStripMenuItem.Text = "Mensual";
             this.mensualToolStripMenuItem.Click += new System.EventHandler(this.mensualToolStripMenuItem_Click);
+            // 
+            // valorToolStripMenuItem
+            // 
+            this.valorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aguaToolStripMenuItem1,
+            this.electricidadToolStripMenuItem1,
+            this.gasToolStripMenuItem1});
+            this.valorToolStripMenuItem.Name = "valorToolStripMenuItem";
+            this.valorToolStripMenuItem.Size = new System.Drawing.Size(45, 22);
+            this.valorToolStripMenuItem.Text = "Valor";
+            // 
+            // aguaToolStripMenuItem1
+            // 
+            this.aguaToolStripMenuItem1.Name = "aguaToolStripMenuItem1";
+            this.aguaToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.aguaToolStripMenuItem1.Text = "Agua";
+            this.aguaToolStripMenuItem1.Click += new System.EventHandler(this.aguaToolStripMenuItem1_Click);
+            // 
+            // electricidadToolStripMenuItem1
+            // 
+            this.electricidadToolStripMenuItem1.Name = "electricidadToolStripMenuItem1";
+            this.electricidadToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.electricidadToolStripMenuItem1.Text = "Electricidad";
+            this.electricidadToolStripMenuItem1.Click += new System.EventHandler(this.electricidadToolStripMenuItem1_Click);
+            // 
+            // gasToolStripMenuItem1
+            // 
+            this.gasToolStripMenuItem1.Name = "gasToolStripMenuItem1";
+            this.gasToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.gasToolStripMenuItem1.Text = "Gas";
+            this.gasToolStripMenuItem1.Click += new System.EventHandler(this.gasToolStripMenuItem1_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -237,9 +256,11 @@
         private System.Windows.Forms.ToolStripMenuItem electricidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.PictureBox picPortada;
-        private System.Windows.Forms.ToolStripMenuItem planillaExcelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem valorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aguaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem electricidadToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gasToolStripMenuItem1;
     }
 }
 

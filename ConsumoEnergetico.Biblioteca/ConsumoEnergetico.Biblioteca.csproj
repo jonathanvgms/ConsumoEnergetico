@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Costo.cs" />
     <Compile Include="EIndicador.cs" />
     <Compile Include="Medicion.cs" />
     <Compile Include="Medidor.cs" />
