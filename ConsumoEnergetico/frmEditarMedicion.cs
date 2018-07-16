@@ -47,26 +47,7 @@ namespace ConsumoEnergetico
             cboMedidor.Items.Clear();
             medidores.FindAll().ToList().ForEach(x => cboMedidor.Items.Add(x));
             cboMedidor.DisplayMember = "Codigo";
-            //var medidorEdit = medidores.FindOne(x => x.Id == medicion.Medidor.Id);
-            //cboMedidor.SelectedValue = db.GetCollection<Medidor>(strMedidores).FindById(medicion.Medidor.Id);
-            //cboMedidor.SelectedIndex = cboMedidor.Items.IndexOf(medidores.FindById(medicion.Medidor.Id));
-            //MessageBox.Show(medidores.FindById(medicion.Medidor.Id).Codigo.ToString());
-            //cboMedidor.SelectedIndex = cboMedidor.Items.IndexOf(medidorEdit);
         }
-
-        //private string GetMedidores(string indicador)
-        //{
-        //    if (indicador == "agua")
-        //        return "medidoresAgua";
-
-        //    if (indicador == "gas")
-        //        return "medidoresGas";
-
-        //    if (indicador == "electricidad")
-        //        return "medidoresElectricidad";
-
-        //    return String.Empty;
-        //}
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {

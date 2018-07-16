@@ -30,6 +30,12 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Borrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.dtpFechaCosto = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,12 +46,6 @@
             this.lblUnidadValor = new System.Windows.Forms.Label();
             this.lblNombreEje = new System.Windows.Forms.Label();
             this.lblUnidad = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Borrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,11 +54,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvHistorial);
-            this.groupBox2.Location = new System.Drawing.Point(11, 91);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(16, 140);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(979, 494);
+            this.groupBox2.Size = new System.Drawing.Size(1468, 760);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Historial";
@@ -79,8 +77,7 @@
             this.Unidad,
             this.Editar,
             this.Borrar});
-            this.dgvHistorial.Location = new System.Drawing.Point(15, 23);
-            this.dgvHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvHistorial.Location = new System.Drawing.Point(22, 35);
             this.dgvHistorial.MultiSelect = false;
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.ReadOnly = true;
@@ -89,112 +86,9 @@
             this.dgvHistorial.RowTemplate.Height = 28;
             this.dgvHistorial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorial.Size = new System.Drawing.Size(950, 456);
+            this.dgvHistorial.Size = new System.Drawing.Size(1425, 702);
             this.dgvHistorial.TabIndex = 0;
-            // 
-            // txtCosto
-            // 
-            this.txtCosto.Location = new System.Drawing.Point(280, 33);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(141, 20);
-            this.txtCosto.TabIndex = 10;
-            // 
-            // dtpFechaCosto
-            // 
-            this.dtpFechaCosto.Location = new System.Drawing.Point(577, 33);
-            this.dtpFechaCosto.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpFechaCosto.Name = "dtpFechaCosto";
-            this.dtpFechaCosto.Size = new System.Drawing.Size(220, 20);
-            this.dtpFechaCosto.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(524, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Fecha";
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(245, 36);
-            this.lblValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(31, 13);
-            this.lblValor.TabIndex = 7;
-            this.lblValor.Text = "Valor";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Eje";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(864, 28);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(101, 28);
-            this.btnGuardar.TabIndex = 3;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblUnidadValor);
-            this.groupBox1.Controls.Add(this.lblNombreEje);
-            this.groupBox1.Controls.Add(this.lblUnidad);
-            this.groupBox1.Controls.Add(this.txtCosto);
-            this.groupBox1.Controls.Add(this.dtpFechaCosto);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lblValor);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Location = new System.Drawing.Point(11, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(979, 72);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nuevo Valor";
-            // 
-            // lblUnidadValor
-            // 
-            this.lblUnidadValor.AutoSize = true;
-            this.lblUnidadValor.Location = new System.Drawing.Point(437, 36);
-            this.lblUnidadValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUnidadValor.Name = "lblUnidadValor";
-            this.lblUnidadValor.Size = new System.Drawing.Size(0, 13);
-            this.lblUnidadValor.TabIndex = 12;
-            // 
-            // lblNombreEje
-            // 
-            this.lblNombreEje.AutoSize = true;
-            this.lblNombreEje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEje.Location = new System.Drawing.Point(54, 33);
-            this.lblNombreEje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombreEje.Name = "lblNombreEje";
-            this.lblNombreEje.Size = new System.Drawing.Size(0, 16);
-            this.lblNombreEje.TabIndex = 11;
-            // 
-            // lblUnidad
-            // 
-            this.lblUnidad.AutoSize = true;
-            this.lblUnidad.Location = new System.Drawing.Point(610, 36);
-            this.lblUnidad.Name = "lblUnidad";
-            this.lblUnidad.Size = new System.Drawing.Size(0, 13);
-            this.lblUnidad.TabIndex = 6;
+            this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistoriaValor_CellClick);
             // 
             // Id
             // 
@@ -232,14 +126,110 @@
             this.Borrar.Name = "Borrar";
             this.Borrar.ReadOnly = true;
             // 
+            // txtCosto
+            // 
+            this.txtCosto.Location = new System.Drawing.Point(420, 51);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(210, 26);
+            this.txtCosto.TabIndex = 10;
+            // 
+            // dtpFechaCosto
+            // 
+            this.dtpFechaCosto.Location = new System.Drawing.Point(866, 51);
+            this.dtpFechaCosto.Name = "dtpFechaCosto";
+            this.dtpFechaCosto.Size = new System.Drawing.Size(328, 26);
+            this.dtpFechaCosto.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(786, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Fecha";
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(368, 55);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(46, 20);
+            this.lblValor.TabIndex = 7;
+            this.lblValor.Text = "Valor";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Eje";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(1296, 43);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(152, 43);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblUnidadValor);
+            this.groupBox1.Controls.Add(this.lblNombreEje);
+            this.groupBox1.Controls.Add(this.lblUnidad);
+            this.groupBox1.Controls.Add(this.txtCosto);
+            this.groupBox1.Controls.Add(this.dtpFechaCosto);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblValor);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Location = new System.Drawing.Point(16, 23);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1468, 111);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nuevo Valor";
+            // 
+            // lblUnidadValor
+            // 
+            this.lblUnidadValor.AutoSize = true;
+            this.lblUnidadValor.Location = new System.Drawing.Point(656, 55);
+            this.lblUnidadValor.Name = "lblUnidadValor";
+            this.lblUnidadValor.Size = new System.Drawing.Size(0, 20);
+            this.lblUnidadValor.TabIndex = 12;
+            // 
+            // lblNombreEje
+            // 
+            this.lblNombreEje.AutoSize = true;
+            this.lblNombreEje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEje.Location = new System.Drawing.Point(81, 51);
+            this.lblNombreEje.Name = "lblNombreEje";
+            this.lblNombreEje.Size = new System.Drawing.Size(0, 25);
+            this.lblNombreEje.TabIndex = 11;
+            // 
+            // lblUnidad
+            // 
+            this.lblUnidad.AutoSize = true;
+            this.lblUnidad.Location = new System.Drawing.Point(915, 55);
+            this.lblUnidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUnidad.Name = "lblUnidad";
+            this.lblUnidad.Size = new System.Drawing.Size(0, 20);
+            this.lblUnidad.TabIndex = 6;
+            // 
             // ucValorEnergetico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucValorEnergetico";
-            this.Size = new System.Drawing.Size(1000, 600);
+            this.Size = new System.Drawing.Size(1500, 923);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
             this.groupBox1.ResumeLayout(false);

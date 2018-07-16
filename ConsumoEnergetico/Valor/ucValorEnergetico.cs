@@ -100,5 +100,30 @@ namespace ConsumoEnergetico
             txtCosto.Clear();
             dtpFechaCosto.ResetText();
         }
+
+        private void dgvHistoriaValor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvHistorial.Columns["Borrar"].Index)
+            {
+                var confirmResult = MessageBox.Show("¿Desea descartar este valor?", "Descartar valor", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    var valores = db.GetCollection<Medicion>(UtilGui.GetStrCostos(indicador));
+                    int Id = int.Parse(dgvHistorial.Rows[e.RowIndex].Cells["Id"].Value.ToString());
+                    valores.Delete(x => x.Id == Id);
+                }
+            }
+
+            if (e.ColumnIndex == dgvHistorial.Columns["Editar"].Index)
+            {
+                var valores = db.GetCollection<Costo>(UtilGui.GetStrCostos(indicador));
+                int Id = int.Parse(dgvHistorial.Rows[e.RowIndex].Cells["Id"].Value.ToString());
+                var costo = valores.FindOne(x => x.Id == Id);
+
+                frmEditarValor editarMedicionAgua = new frmEditarValor(indicador, db, valores, costo);
+                editarMedicionAgua.ShowDialog(this);
+            }
+            ActualizarHistorialCostos();
+        }
     }
 }
