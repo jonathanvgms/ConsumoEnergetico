@@ -123,7 +123,7 @@ namespace ConsumoEnergetico
                 var confirmResult = MessageBox.Show("¿Desea descartar esta medición?", "Descartar medición", MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
                 {
-                    var medicionesAgua = db.GetCollection<Medicion>("medicionesAgua");
+                    var medicionesAgua = db.GetCollection<Medicion>(UtilGui.GetStrMediciones(indicador));
                     int IdMedicion = int.Parse(dgvHistorialAgua.Rows[e.RowIndex].Cells["Id"].Value.ToString());
                     medicionesAgua.Delete(x => x.Id == IdMedicion);
                 }

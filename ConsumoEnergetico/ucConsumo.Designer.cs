@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.lblConsumoTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvHistorialAnual = new System.Windows.Forms.DataGridView();
-            this.lstAnios = new System.Windows.Forms.ListBox();
             this.Eje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Enero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Febrero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,13 +65,14 @@
             this.Diciembre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chtAnualAgua = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lstAnios = new System.Windows.Forms.ListBox();
+            this.chtAgua = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialAnual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chtAnualAgua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtAgua)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -267,15 +268,6 @@
             this.dgvHistorialAnual.Size = new System.Drawing.Size(1251, 155);
             this.dgvHistorialAnual.TabIndex = 0;
             // 
-            // lstAnios
-            // 
-            this.lstAnios.FormattingEnabled = true;
-            this.lstAnios.ItemHeight = 20;
-            this.lstAnios.Location = new System.Drawing.Point(27, 42);
-            this.lstAnios.Name = "lstAnios";
-            this.lstAnios.Size = new System.Drawing.Size(271, 124);
-            this.lstAnios.TabIndex = 12;
-            // 
             // Eje
             // 
             this.Eje.HeaderText = "Eje";
@@ -366,28 +358,40 @@
             this.Unidad.Name = "Unidad";
             this.Unidad.ReadOnly = true;
             // 
-            // chtAnualAgua
+            // lstAnios
+            // 
+            this.lstAnios.FormattingEnabled = true;
+            this.lstAnios.ItemHeight = 20;
+            this.lstAnios.Location = new System.Drawing.Point(27, 42);
+            this.lstAnios.Name = "lstAnios";
+            this.lstAnios.Size = new System.Drawing.Size(271, 124);
+            this.lstAnios.TabIndex = 12;
+            // 
+            // chtAgua
             // 
             chartArea1.Name = "ChartArea1";
-            this.chtAnualAgua.ChartAreas.Add(chartArea1);
+            this.chtAgua.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chtAnualAgua.Legends.Add(legend1);
-            this.chtAnualAgua.Location = new System.Drawing.Point(27, 421);
-            this.chtAnualAgua.Name = "chtAnualAgua";
+            this.chtAgua.Legends.Add(legend1);
+            this.chtAgua.Location = new System.Drawing.Point(27, 421);
+            this.chtAgua.Name = "chtAgua";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chtAnualAgua.Series.Add(series1);
-            this.chtAnualAgua.Size = new System.Drawing.Size(1293, 218);
-            this.chtAnualAgua.TabIndex = 13;
-            this.chtAnualAgua.Text = "Consumo Agua";
+            series1.Name = "Agua";
+            this.chtAgua.Series.Add(series1);
+            this.chtAgua.Size = new System.Drawing.Size(1293, 218);
+            this.chtAgua.TabIndex = 13;
+            this.chtAgua.Text = "Consumo Agua";
+            title1.Name = "Consumo Anual";
+            title1.Text = "Consumo Anual";
+            this.chtAgua.Titles.Add(title1);
             // 
             // ucConsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chtAnualAgua);
+            this.Controls.Add(this.chtAgua);
             this.Controls.Add(this.lstAnios);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -405,7 +409,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialAnual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chtAnualAgua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtAgua)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,6 +451,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Diciembre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chtAnualAgua;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chtAgua;
     }
 }

@@ -33,7 +33,7 @@ namespace ConsumoEnergetico
         private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnlPrincipal.Controls.Clear();
-            ucConsumo consumo = new ucConsumo();
+            ucConsumo consumo = new ucConsumo(db);
             pnlPrincipal.Controls.Add(consumo);
             consumo.Location = new Point(ClientSize.Width / 2 - consumo.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - consumo.Size.Height / 2 - altoBarraTitulo);
         }
