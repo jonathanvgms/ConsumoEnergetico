@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvHistorialAgua = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,22 +50,9 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevoMedidor = new System.Windows.Forms.Button();
             this.cboMedidor = new System.Windows.Forms.ComboBox();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialAgua)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgvHistorialAgua);
-            this.groupBox2.Location = new System.Drawing.Point(9, 171);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(979, 413);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Historial";
             // 
             // dgvHistorialAgua
             // 
@@ -86,8 +72,7 @@
             this.Detalle,
             this.Editar,
             this.Borrar});
-            this.dgvHistorialAgua.Location = new System.Drawing.Point(15, 23);
-            this.dgvHistorialAgua.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvHistorialAgua.Location = new System.Drawing.Point(14, 251);
             this.dgvHistorialAgua.MultiSelect = false;
             this.dgvHistorialAgua.Name = "dgvHistorialAgua";
             this.dgvHistorialAgua.ReadOnly = true;
@@ -96,7 +81,7 @@
             this.dgvHistorialAgua.RowTemplate.Height = 28;
             this.dgvHistorialAgua.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvHistorialAgua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorialAgua.Size = new System.Drawing.Size(950, 374);
+            this.dgvHistorialAgua.Size = new System.Drawing.Size(1468, 653);
             this.dgvHistorialAgua.TabIndex = 0;
             this.dgvHistorialAgua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgHistorialAgua_CellClick);
             // 
@@ -162,102 +147,96 @@
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnNuevoMedidor);
             this.groupBox1.Controls.Add(this.cboMedidor);
-            this.groupBox1.Location = new System.Drawing.Point(9, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(14, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(979, 139);
+            this.groupBox1.Size = new System.Drawing.Size(1468, 214);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Medición";
             // 
             // txtDetalleMedicion
             // 
-            this.txtDetalleMedicion.Location = new System.Drawing.Point(464, 69);
+            this.txtDetalleMedicion.Location = new System.Drawing.Point(696, 106);
+            this.txtDetalleMedicion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDetalleMedicion.Multiline = true;
             this.txtDetalleMedicion.Name = "txtDetalleMedicion";
-            this.txtDetalleMedicion.Size = new System.Drawing.Size(240, 52);
+            this.txtDetalleMedicion.Size = new System.Drawing.Size(358, 78);
             this.txtDetalleMedicion.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(405, 72);
+            this.label5.Location = new System.Drawing.Point(608, 111);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Detalle";
             // 
             // lblUnidad
             // 
             this.lblUnidad.AutoSize = true;
-            this.lblUnidad.Location = new System.Drawing.Point(610, 36);
+            this.lblUnidad.Location = new System.Drawing.Point(915, 55);
+            this.lblUnidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnidad.Name = "lblUnidad";
-            this.lblUnidad.Size = new System.Drawing.Size(0, 13);
+            this.lblUnidad.Size = new System.Drawing.Size(0, 20);
             this.lblUnidad.TabIndex = 6;
             // 
             // txtDatoMedicion
             // 
-            this.txtDatoMedicion.Location = new System.Drawing.Point(464, 33);
-            this.txtDatoMedicion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDatoMedicion.Location = new System.Drawing.Point(696, 51);
             this.txtDatoMedicion.Name = "txtDatoMedicion";
-            this.txtDatoMedicion.Size = new System.Drawing.Size(141, 20);
+            this.txtDatoMedicion.Size = new System.Drawing.Size(210, 26);
             this.txtDatoMedicion.TabIndex = 10;
             // 
             // dtpFechaMedicion
             // 
-            this.dtpFechaMedicion.Location = new System.Drawing.Point(745, 33);
-            this.dtpFechaMedicion.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaMedicion.Location = new System.Drawing.Point(1118, 51);
             this.dtpFechaMedicion.Name = "dtpFechaMedicion";
-            this.dtpFechaMedicion.Size = new System.Drawing.Size(220, 20);
+            this.dtpFechaMedicion.Size = new System.Drawing.Size(328, 26);
             this.dtpFechaMedicion.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(688, 35);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1032, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Fecha";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(405, 36);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(608, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Consumo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(39, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Medidor";
             // 
             // lblDescripcionMedidor
             // 
             this.lblDescripcionMedidor.AutoSize = true;
-            this.lblDescripcionMedidor.Location = new System.Drawing.Point(85, 55);
-            this.lblDescripcionMedidor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcionMedidor.Location = new System.Drawing.Point(128, 85);
             this.lblDescripcionMedidor.Name = "lblDescripcionMedidor";
-            this.lblDescripcionMedidor.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcionMedidor.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcionMedidor.TabIndex = 5;
             this.lblDescripcionMedidor.Text = "Descripción";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(864, 93);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Location = new System.Drawing.Point(1296, 143);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(101, 28);
+            this.btnGuardar.Size = new System.Drawing.Size(152, 43);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -265,10 +244,9 @@
             // 
             // btnNuevoMedidor
             // 
-            this.btnNuevoMedidor.Location = new System.Drawing.Point(254, 27);
-            this.btnNuevoMedidor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevoMedidor.Location = new System.Drawing.Point(381, 42);
             this.btnNuevoMedidor.Name = "btnNuevoMedidor";
-            this.btnNuevoMedidor.Size = new System.Drawing.Size(107, 28);
+            this.btnNuevoMedidor.Size = new System.Drawing.Size(160, 43);
             this.btnNuevoMedidor.TabIndex = 2;
             this.btnNuevoMedidor.Text = "Agregar Medidor";
             this.btnNuevoMedidor.UseVisualStyleBackColor = true;
@@ -277,23 +255,20 @@
             // cboMedidor
             // 
             this.cboMedidor.FormattingEnabled = true;
-            this.cboMedidor.Location = new System.Drawing.Point(88, 32);
-            this.cboMedidor.Margin = new System.Windows.Forms.Padding(2);
+            this.cboMedidor.Location = new System.Drawing.Point(132, 49);
             this.cboMedidor.Name = "cboMedidor";
-            this.cboMedidor.Size = new System.Drawing.Size(141, 21);
+            this.cboMedidor.Size = new System.Drawing.Size(210, 28);
             this.cboMedidor.TabIndex = 1;
             this.cboMedidor.SelectedIndexChanged += new System.EventHandler(this.ActualizarDescripcionMedidor);
             // 
             // ucMedicion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvHistorialAgua);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucMedicion";
-            this.Size = new System.Drawing.Size(1000, 600);
-            this.groupBox2.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1500, 923);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialAgua)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -302,7 +277,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvHistorialAgua;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtDetalleMedicion;

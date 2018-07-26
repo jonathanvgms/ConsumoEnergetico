@@ -28,51 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.lblConsumoTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTotalAgua = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblTotalElectricidad = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblTotalGas = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvHistorialAnual = new System.Windows.Forms.DataGridView();
-            this.Eje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Enero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Febrero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Abril = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mayo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Junio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Julio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Agosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Septiembre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Octubre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Noviembre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diciembre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstAnios = new System.Windows.Forms.ListBox();
-            this.chtAgua = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chtConsumo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialAnual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chtAgua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtConsumo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,7 +72,7 @@
             // lblConsumoTotal
             // 
             this.lblConsumoTotal.AutoSize = true;
-            this.lblConsumoTotal.Location = new System.Drawing.Point(58, 34);
+            this.lblConsumoTotal.Location = new System.Drawing.Point(6, 34);
             this.lblConsumoTotal.Name = "lblConsumoTotal";
             this.lblConsumoTotal.Size = new System.Drawing.Size(116, 20);
             this.lblConsumoTotal.TabIndex = 3;
@@ -96,16 +81,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 34);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(246, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 20);
+            this.label2.Size = new System.Drawing.Size(36, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "M3";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 71);
+            this.label4.Location = new System.Drawing.Point(6, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 6;
@@ -114,14 +100,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(174, 71);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(146, 69);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(77, 22);
             this.label5.TabIndex = 8;
             this.label5.Text = "$ valor ";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblTotalAgua);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblConsumoTotal);
             this.groupBox1.Controls.Add(this.label4);
@@ -133,8 +121,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agua";
             // 
+            // lblTotalAgua
+            // 
+            this.lblTotalAgua.AutoSize = true;
+            this.lblTotalAgua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAgua.Location = new System.Drawing.Point(146, 32);
+            this.lblTotalAgua.Name = "lblTotalAgua";
+            this.lblTotalAgua.Size = new System.Drawing.Size(21, 22);
+            this.lblTotalAgua.TabIndex = 9;
+            this.lblTotalAgua.Text = "0";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblTotalElectricidad);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
@@ -146,19 +145,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Electricidad";
             // 
+            // lblTotalElectricidad
+            // 
+            this.lblTotalElectricidad.AutoSize = true;
+            this.lblTotalElectricidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalElectricidad.Location = new System.Drawing.Point(170, 32);
+            this.lblTotalElectricidad.Name = "lblTotalElectricidad";
+            this.lblTotalElectricidad.Size = new System.Drawing.Size(21, 22);
+            this.lblTotalElectricidad.TabIndex = 14;
+            this.lblTotalElectricidad.Text = "0";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(180, 71);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(170, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.Size = new System.Drawing.Size(77, 22);
             this.label6.TabIndex = 8;
             this.label6.Text = "$ valor ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 34);
+            this.label7.Location = new System.Drawing.Point(6, 34);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 20);
             this.label7.TabIndex = 3;
@@ -167,7 +177,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(64, 71);
+            this.label8.Location = new System.Drawing.Point(6, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 20);
             this.label8.TabIndex = 6;
@@ -176,14 +186,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(206, 34);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(244, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 20);
+            this.label9.Size = new System.Drawing.Size(41, 22);
             this.label9.TabIndex = 4;
             this.label9.Text = "KW";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblTotalGas);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
@@ -195,19 +207,30 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gas";
             // 
+            // lblTotalGas
+            // 
+            this.lblTotalGas.AutoSize = true;
+            this.lblTotalGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGas.Location = new System.Drawing.Point(158, 32);
+            this.lblTotalGas.Name = "lblTotalGas";
+            this.lblTotalGas.Size = new System.Drawing.Size(21, 22);
+            this.lblTotalGas.TabIndex = 15;
+            this.lblTotalGas.Text = "0";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(181, 71);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(158, 69);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.Size = new System.Drawing.Size(77, 22);
             this.label11.TabIndex = 8;
             this.label11.Text = "$ valor ";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(65, 34);
+            this.label12.Location = new System.Drawing.Point(6, 34);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(116, 20);
             this.label12.TabIndex = 3;
@@ -216,7 +239,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(65, 71);
+            this.label13.Location = new System.Drawing.Point(6, 71);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 20);
             this.label13.TabIndex = 6;
@@ -225,175 +248,62 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(207, 34);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(247, 32);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 20);
+            this.label14.Size = new System.Drawing.Size(36, 22);
             this.label14.TabIndex = 4;
             this.label14.Text = "M3";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dgvHistorialAnual);
-            this.groupBox4.Location = new System.Drawing.Point(27, 189);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1293, 213);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Consumo Anual";
-            // 
             // dgvHistorialAnual
             // 
+            this.dgvHistorialAnual.AllowUserToAddRows = false;
+            this.dgvHistorialAnual.AllowUserToDeleteRows = false;
+            this.dgvHistorialAnual.AllowUserToResizeColumns = false;
+            this.dgvHistorialAnual.AllowUserToResizeRows = false;
             this.dgvHistorialAnual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorialAnual.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eje,
-            this.Enero,
-            this.Febrero,
-            this.Marzo,
-            this.Abril,
-            this.Mayo,
-            this.Junio,
-            this.Julio,
-            this.Agosto,
-            this.Septiembre,
-            this.Octubre,
-            this.Noviembre,
-            this.Diciembre,
-            this.Total,
-            this.Unidad});
-            this.dgvHistorialAnual.Location = new System.Drawing.Point(23, 36);
+            this.dgvHistorialAnual.Location = new System.Drawing.Point(27, 186);
             this.dgvHistorialAnual.Name = "dgvHistorialAnual";
             this.dgvHistorialAnual.ReadOnly = true;
             this.dgvHistorialAnual.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialAnual.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHistorialAnual.RowTemplate.Height = 28;
-            this.dgvHistorialAnual.Size = new System.Drawing.Size(1251, 155);
+            this.dgvHistorialAnual.Size = new System.Drawing.Size(1293, 165);
             this.dgvHistorialAnual.TabIndex = 0;
-            // 
-            // Eje
-            // 
-            this.Eje.HeaderText = "Eje";
-            this.Eje.Name = "Eje";
-            this.Eje.ReadOnly = true;
-            // 
-            // Enero
-            // 
-            this.Enero.HeaderText = "Ene";
-            this.Enero.Name = "Enero";
-            this.Enero.ReadOnly = true;
-            // 
-            // Febrero
-            // 
-            this.Febrero.HeaderText = "Feb";
-            this.Febrero.Name = "Febrero";
-            this.Febrero.ReadOnly = true;
-            // 
-            // Marzo
-            // 
-            this.Marzo.HeaderText = "Mar";
-            this.Marzo.Name = "Marzo";
-            this.Marzo.ReadOnly = true;
-            // 
-            // Abril
-            // 
-            this.Abril.HeaderText = "Abr";
-            this.Abril.Name = "Abril";
-            this.Abril.ReadOnly = true;
-            // 
-            // Mayo
-            // 
-            this.Mayo.HeaderText = "May";
-            this.Mayo.Name = "Mayo";
-            this.Mayo.ReadOnly = true;
-            // 
-            // Junio
-            // 
-            this.Junio.HeaderText = "Jun";
-            this.Junio.Name = "Junio";
-            this.Junio.ReadOnly = true;
-            // 
-            // Julio
-            // 
-            this.Julio.HeaderText = "Jul";
-            this.Julio.Name = "Julio";
-            this.Julio.ReadOnly = true;
-            // 
-            // Agosto
-            // 
-            this.Agosto.HeaderText = "Ago";
-            this.Agosto.Name = "Agosto";
-            this.Agosto.ReadOnly = true;
-            // 
-            // Septiembre
-            // 
-            this.Septiembre.HeaderText = "Sep";
-            this.Septiembre.Name = "Septiembre";
-            this.Septiembre.ReadOnly = true;
-            // 
-            // Octubre
-            // 
-            this.Octubre.HeaderText = "Oct";
-            this.Octubre.Name = "Octubre";
-            this.Octubre.ReadOnly = true;
-            // 
-            // Noviembre
-            // 
-            this.Noviembre.HeaderText = "Nov";
-            this.Noviembre.Name = "Noviembre";
-            this.Noviembre.ReadOnly = true;
-            // 
-            // Diciembre
-            // 
-            this.Diciembre.HeaderText = "Dic";
-            this.Diciembre.Name = "Diciembre";
-            this.Diciembre.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Unidad
-            // 
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
             // 
             // lstAnios
             // 
+            this.lstAnios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstAnios.FormattingEnabled = true;
-            this.lstAnios.ItemHeight = 20;
+            this.lstAnios.ItemHeight = 22;
             this.lstAnios.Location = new System.Drawing.Point(27, 42);
             this.lstAnios.Name = "lstAnios";
-            this.lstAnios.Size = new System.Drawing.Size(271, 124);
+            this.lstAnios.Size = new System.Drawing.Size(271, 114);
             this.lstAnios.TabIndex = 12;
+            this.lstAnios.SelectedIndexChanged += new System.EventHandler(this.SeleccionarAnio_IndexChanged);
             // 
-            // chtAgua
+            // chtConsumo
             // 
+            this.chtConsumo.BorderlineColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea1";
-            this.chtAgua.ChartAreas.Add(chartArea1);
+            this.chtConsumo.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chtAgua.Legends.Add(legend1);
-            this.chtAgua.Location = new System.Drawing.Point(27, 421);
-            this.chtAgua.Name = "chtAgua";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Agua";
-            this.chtAgua.Series.Add(series1);
-            this.chtAgua.Size = new System.Drawing.Size(1293, 218);
-            this.chtAgua.TabIndex = 13;
-            this.chtAgua.Text = "Consumo Agua";
-            title1.Name = "Consumo Anual";
-            title1.Text = "Consumo Anual";
-            this.chtAgua.Titles.Add(title1);
+            this.chtConsumo.Legends.Add(legend1);
+            this.chtConsumo.Location = new System.Drawing.Point(27, 370);
+            this.chtConsumo.Name = "chtConsumo";
+            this.chtConsumo.Size = new System.Drawing.Size(1293, 269);
+            this.chtConsumo.TabIndex = 13;
+            this.chtConsumo.Text = "Consumo Agua";
             // 
             // ucConsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chtAgua);
+            this.Controls.Add(this.dgvHistorialAnual);
+            this.Controls.Add(this.chtConsumo);
             this.Controls.Add(this.lstAnios);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -407,9 +317,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialAnual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chtAgua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtConsumo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,24 +342,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgvHistorialAnual;
         private System.Windows.Forms.ListBox lstAnios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Enero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Febrero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marzo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Abril;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mayo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Junio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Julio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Agosto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Septiembre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Octubre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Noviembre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diciembre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chtAgua;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chtConsumo;
+        private System.Windows.Forms.Label lblTotalAgua;
+        private System.Windows.Forms.Label lblTotalElectricidad;
+        private System.Windows.Forms.Label lblTotalGas;
     }
 }

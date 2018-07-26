@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +84,9 @@
             this.dgvHistorial.ReadOnly = true;
             this.dgvHistorial.RowHeadersVisible = false;
             this.dgvHistorial.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorial.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHistorial.RowTemplate.Height = 28;
             this.dgvHistorial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -163,9 +167,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Eje";
+            this.label1.Text = "Indicador";
             // 
             // btnGuardar
             // 
@@ -207,7 +211,7 @@
             // 
             this.lblNombreEje.AutoSize = true;
             this.lblNombreEje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEje.Location = new System.Drawing.Point(81, 51);
+            this.lblNombreEje.Location = new System.Drawing.Point(128, 51);
             this.lblNombreEje.Name = "lblNombreEje";
             this.lblNombreEje.Size = new System.Drawing.Size(0, 25);
             this.lblNombreEje.TabIndex = 11;

@@ -24,6 +24,19 @@ namespace ConsumoEnergetico
             this.indicador = indicador;
             UtilGui.ActualizarMedidores(indicador, db, this.cboMedidor);
             this.lblUnidad.Text = UtilGui.GetUnidad(indicador);
+            switch (indicador)
+            {
+                case "agua":
+                    {
+                        //groupBox1.BackColor = Color.LightBlue;
+                        this.BackColor = Color.AliceBlue;
+                        break;
+                    }
+                case "electricidad": this.BackColor = Color.LightPink;
+                    break;
+                case "gas": this.BackColor = Color.LightYellow;
+                    break;
+            }
             ActualizarHistorialMediciones();
         }
 
