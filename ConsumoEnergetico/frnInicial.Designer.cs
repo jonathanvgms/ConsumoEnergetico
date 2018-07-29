@@ -65,7 +65,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(884, 69);
+            this.menuStrip1.Size = new System.Drawing.Size(1348, 69);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,7 +88,7 @@
             // 
             this.abrirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.abrirToolStripMenuItem.Text = "Importar";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -118,7 +118,7 @@
             // 
             this.aguaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aguaToolStripMenuItem.Name = "aguaToolStripMenuItem";
-            this.aguaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aguaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.aguaToolStripMenuItem.Text = "Agua";
             this.aguaToolStripMenuItem.Click += new System.EventHandler(this.aguaToolStripMenuItem_Click);
             // 
@@ -126,7 +126,7 @@
             // 
             this.electricidadToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.electricidadToolStripMenuItem.Name = "electricidadToolStripMenuItem";
-            this.electricidadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.electricidadToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.electricidadToolStripMenuItem.Text = "Electricidad";
             this.electricidadToolStripMenuItem.Click += new System.EventHandler(this.electricidadToolStripMenuItem_Click);
             // 
@@ -134,7 +134,7 @@
             // 
             this.gasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gasToolStripMenuItem.Name = "gasToolStripMenuItem";
-            this.gasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.gasToolStripMenuItem.Text = "Gas";
             this.gasToolStripMenuItem.Click += new System.EventHandler(this.gasToolStripMenuItem_Click);
             // 
@@ -155,7 +155,7 @@
             // 
             this.generalToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.generalToolStripMenuItem.Text = "Anual";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
@@ -163,7 +163,7 @@
             // 
             this.mensualToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mensualToolStripMenuItem.Name = "mensualToolStripMenuItem";
-            this.mensualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mensualToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.mensualToolStripMenuItem.Text = "Mensual";
             this.mensualToolStripMenuItem.Click += new System.EventHandler(this.mensualToolStripMenuItem_Click);
             // 
@@ -185,7 +185,7 @@
             // 
             this.aguaToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aguaToolStripMenuItem1.Name = "aguaToolStripMenuItem1";
-            this.aguaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aguaToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.aguaToolStripMenuItem1.Text = "Agua";
             this.aguaToolStripMenuItem1.Click += new System.EventHandler(this.aguaToolStripMenuItem1_Click);
             // 
@@ -193,7 +193,7 @@
             // 
             this.electricidadToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.electricidadToolStripMenuItem1.Name = "electricidadToolStripMenuItem1";
-            this.electricidadToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.electricidadToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.electricidadToolStripMenuItem1.Text = "Electricidad";
             this.electricidadToolStripMenuItem1.Click += new System.EventHandler(this.electricidadToolStripMenuItem1_Click);
             // 
@@ -201,7 +201,7 @@
             // 
             this.gasToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gasToolStripMenuItem1.Name = "gasToolStripMenuItem1";
-            this.gasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.gasToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.gasToolStripMenuItem1.Text = "Gas";
             this.gasToolStripMenuItem1.Click += new System.EventHandler(this.gasToolStripMenuItem1_Click);
             // 
@@ -220,7 +220,7 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de ...";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
@@ -230,9 +230,9 @@
             this.pnlPrincipal.Controls.Add(this.picPortada);
             this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPrincipal.Location = new System.Drawing.Point(0, 69);
-            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(884, 418);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1348, 618);
             this.pnlPrincipal.TabIndex = 1;
             // 
             // picPortada
@@ -241,9 +241,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picPortada.Image = ((System.Drawing.Image)(resources.GetObject("picPortada.Image")));
-            this.picPortada.Location = new System.Drawing.Point(30, 26);
+            this.picPortada.Location = new System.Drawing.Point(365, 31);
             this.picPortada.Name = "picPortada";
-            this.picPortada.Size = new System.Drawing.Size(931, 405);
+            this.picPortada.Size = new System.Drawing.Size(933, 587);
             this.picPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picPortada.TabIndex = 0;
             this.picPortada.TabStop = false;
@@ -253,12 +253,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(884, 487);
+            this.ClientSize = new System.Drawing.Size(1348, 687);
             this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "frnInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consumo Energético";

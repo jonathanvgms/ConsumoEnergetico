@@ -111,8 +111,7 @@ namespace ConsumoEnergetico.Consumo
                         break;
                     case "gas": chtConsumoGas.Series[UtilGui.FormatIndicador(indicador)].Points.AddXY(mes, consumoEje[mes]);
                         break;
-                }
-               
+                }               
                 m++;
             }
 

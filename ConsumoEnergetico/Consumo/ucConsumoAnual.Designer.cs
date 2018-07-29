@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.label1 = new System.Windows.Forms.Label();
             this.lblConsumoTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -265,25 +265,25 @@
             this.dgvHistorialAnual.AllowUserToDeleteRows = false;
             this.dgvHistorialAnual.AllowUserToResizeColumns = false;
             this.dgvHistorialAnual.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialAnual.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialAnual.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHistorialAnual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialAnual.Location = new System.Drawing.Point(270, 27);
             this.dgvHistorialAnual.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHistorialAnual.Name = "dgvHistorialAnual";
             this.dgvHistorialAnual.ReadOnly = true;
             this.dgvHistorialAnual.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialAnual.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialAnual.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistorialAnual.RowTemplate.Height = 28;
-            this.dgvHistorialAnual.Size = new System.Drawing.Size(862, 107);
+            this.dgvHistorialAnual.Size = new System.Drawing.Size(1080, 107);
             this.dgvHistorialAnual.TabIndex = 0;
             // 
             // lstAnios
@@ -301,42 +301,45 @@
             // chtConsumoAgua
             // 
             this.chtConsumoAgua.BorderlineColor = System.Drawing.Color.Black;
-            chartArea4.Name = "ChartArea1";
-            this.chtConsumoAgua.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chtConsumoAgua.Legends.Add(legend4);
+            this.chtConsumoAgua.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.Name = "ChartArea1";
+            this.chtConsumoAgua.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chtConsumoAgua.Legends.Add(legend1);
             this.chtConsumoAgua.Location = new System.Drawing.Point(270, 148);
             this.chtConsumoAgua.Margin = new System.Windows.Forms.Padding(2);
             this.chtConsumoAgua.Name = "chtConsumoAgua";
-            this.chtConsumoAgua.Size = new System.Drawing.Size(862, 121);
+            this.chtConsumoAgua.Size = new System.Drawing.Size(1080, 121);
             this.chtConsumoAgua.TabIndex = 13;
             this.chtConsumoAgua.Text = "Consumo Agua";
             // 
             // chtConsumoElectricidad
             // 
             this.chtConsumoElectricidad.BorderlineColor = System.Drawing.Color.Black;
-            chartArea5.Name = "ChartArea1";
-            this.chtConsumoElectricidad.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chtConsumoElectricidad.Legends.Add(legend5);
+            this.chtConsumoElectricidad.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea2.Name = "ChartArea1";
+            this.chtConsumoElectricidad.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chtConsumoElectricidad.Legends.Add(legend2);
             this.chtConsumoElectricidad.Location = new System.Drawing.Point(270, 279);
             this.chtConsumoElectricidad.Margin = new System.Windows.Forms.Padding(2);
             this.chtConsumoElectricidad.Name = "chtConsumoElectricidad";
-            this.chtConsumoElectricidad.Size = new System.Drawing.Size(862, 121);
+            this.chtConsumoElectricidad.Size = new System.Drawing.Size(1080, 121);
             this.chtConsumoElectricidad.TabIndex = 14;
             this.chtConsumoElectricidad.Text = "Consumo Agua";
             // 
             // chtConsumoGas
             // 
             this.chtConsumoGas.BorderlineColor = System.Drawing.Color.Black;
-            chartArea6.Name = "ChartArea1";
-            this.chtConsumoGas.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chtConsumoGas.Legends.Add(legend6);
+            this.chtConsumoGas.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea3.Name = "ChartArea1";
+            this.chtConsumoGas.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chtConsumoGas.Legends.Add(legend3);
             this.chtConsumoGas.Location = new System.Drawing.Point(270, 409);
             this.chtConsumoGas.Margin = new System.Windows.Forms.Padding(2);
             this.chtConsumoGas.Name = "chtConsumoGas";
-            this.chtConsumoGas.Size = new System.Drawing.Size(862, 121);
+            this.chtConsumoGas.Size = new System.Drawing.Size(1080, 121);
             this.chtConsumoGas.TabIndex = 15;
             this.chtConsumoGas.Text = "Consumo Agua";
             // 
@@ -415,7 +418,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucConsumoAnual";
-            this.Size = new System.Drawing.Size(1150, 650);
+            this.Size = new System.Drawing.Size(1366, 650);
             this.Load += new System.EventHandler(this.ucConsumo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

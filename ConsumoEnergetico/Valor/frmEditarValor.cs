@@ -39,6 +39,12 @@ namespace ConsumoEnergetico
         {
             txtDatoMedicion.Text = costo.Valor.ToString();
             dtpFechaMedicion.Value = costo.Fecha;
+            lblUnidad.Text = GetUnidadCobro();
+        }
+
+        private string GetUnidadCobro()
+        {
+            return indicador.Equals("electricidad") ? string.Format("$ / {0}H", UtilGui.GetUnidad(indicador)) : string.Format("$ / {0}", UtilGui.GetUnidad(indicador));
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
