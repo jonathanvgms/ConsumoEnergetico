@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ConsumoEnergetico.Biblioteca;
 using LiteDB;
 
-namespace ConsumoEnergetico
+namespace ConsumoEnergetico.Mediciones
 {
     public partial class frmEditarMedicion : Form
     {

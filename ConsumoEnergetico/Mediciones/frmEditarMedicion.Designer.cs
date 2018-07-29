@@ -1,4 +1,4 @@
-﻿namespace ConsumoEnergetico
+﻿namespace ConsumoEnergetico.Mediciones
 {
     partial class frmEditarMedicion
     {

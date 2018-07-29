@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using LiteDB;
 using ConsumoEnergetico.Biblioteca;
 
-namespace ConsumoEnergetico
+namespace ConsumoEnergetico.Mediciones
 {
     public partial class ucMedicion : UserControl
     {
@@ -22,6 +22,7 @@ namespace ConsumoEnergetico
             InitializeComponent();
             this.db = db;
             this.indicador = indicador;
+            lblNombreEje.Text = UtilGui.FormatIndicador(indicador);
             UtilGui.ActualizarMedidores(indicador, db, this.cboMedidor);
             this.lblUnidad.Text = UtilGui.GetUnidad(indicador);
             switch (indicador)
@@ -77,11 +78,18 @@ namespace ConsumoEnergetico
                     }
                 }
             }
+            double valor = 0;
+
+            if (!double.TryParse(txtDatoMedicion.Text, out valor))
+            {
+                MessageBox.Show("El campo 'Consumo' es invalido");
+                return;
+            }
 
             mediciones.Insert(new Medicion
             {
                 Medidor = (Medidor)cboMedidor.SelectedItem,
-                Dato = Convert.ToDouble(txtDatoMedicion.Text),
+                Dato = valor,
                 Fecha = dtpFechaMedicion.Value,
                 Detalle = txtDetalleMedicion.Text
             });

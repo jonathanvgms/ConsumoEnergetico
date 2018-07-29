@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConsumoEnergetico.Biblioteca;
+using ConsumoEnergetico.Consumo;
+using ConsumoEnergetico.Mediciones;
 using LiteDB;
 
 namespace ConsumoEnergetico
@@ -28,14 +30,6 @@ namespace ConsumoEnergetico
                 db = new LiteDatabase(@"mediciones.db");
             }
             picPortada.Location = new Point(ClientSize.Width / 2 - picPortada.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - picPortada.Size.Height / 2 - altoBarraTitulo);
-        }
-
-        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pnlPrincipal.Controls.Clear();
-            ucConsumo consumo = new ucConsumo(db);
-            pnlPrincipal.Controls.Add(consumo);
-            consumo.Location = new Point(ClientSize.Width / 2 - consumo.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - consumo.Size.Height / 2 - altoBarraTitulo);
         }
 
         private void aguaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,10 +57,20 @@ namespace ConsumoEnergetico
             ucGas.Location = new Point(ClientSize.Width / 2 - ucGas.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - ucGas.Size.Height / 2 - altoBarraTitulo);
         }
 
+        //Consumos anuales y mensuales
+
+        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlPrincipal.Controls.Clear();
+            ucConsumoAnual consumo = new ucConsumoAnual(db);
+            pnlPrincipal.Controls.Add(consumo);
+            consumo.Location = new Point(ClientSize.Width / 2 - consumo.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - consumo.Size.Height / 2 - altoBarraTitulo);
+        }
+
         private void mensualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.pnlPrincipal.Controls.Clear();
-            ucConsumoMensual ucconsumoMensual = new ucConsumoMensual();
+            ucConsumoMensual ucconsumoMensual = new ucConsumoMensual(db);
             pnlPrincipal.Controls.Add(ucconsumoMensual);
             ucconsumoMensual.Location = new Point(ClientSize.Width / 2 - ucconsumoMensual.Size.Width / 2 - anchoBarraTitulo, ClientSize.Height / 2 - ucconsumoMensual.Size.Height / 2 - altoBarraTitulo);
         }
@@ -114,6 +118,8 @@ namespace ConsumoEnergetico
                 pnlPrincipal.Controls.Clear();
             }            
         }
+
+        //Valor de unidades M3, KWH
 
         private void aguaToolStripMenuItem1_Click(object sender, EventArgs e)
         {

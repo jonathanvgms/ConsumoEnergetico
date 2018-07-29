@@ -27,15 +27,30 @@ namespace ConsumoEnergetico
             this.indicador = indicador;
             this.db = db;
             InitializeComponent();
-            this.lblNombreEje.Text = indicador;
-            this.lblUnidadValor.Text = GetUnidadCobro();
+            lblNombreEje.Text = UtilGui.FormatIndicador(indicador);
+            lblUnidadValor.Text = GetUnidadCobro();
+            switch (indicador)
+            {
+                case "agua":
+                    {
+                        //groupBox1.BackColor = Color.LightBlue;
+                        this.BackColor = Color.AliceBlue;
+                        break;
+                    }
+                case "electricidad":
+                    this.BackColor = Color.LightPink;
+                    break;
+                case "gas":
+                    this.BackColor = Color.LightYellow;
+                    break;
+            }
             LimpiarControlesCostos();
             ActualizarHistorialCostos();
         }
 
         private string GetUnidadCobro()
         {
-            return indicador.Equals("electricidad") ? string.Format("$/{0}H", UtilGui.GetUnidad(indicador)) : string.Format("$/{0}", UtilGui.GetUnidad(indicador));
+            return indicador.Equals("electricidad") ? string.Format("$ / {0}H", UtilGui.GetUnidad(indicador)) : string.Format("$ / {0}", UtilGui.GetUnidad(indicador));
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -47,9 +62,12 @@ namespace ConsumoEnergetico
                 return;
             }
 
-            costos.Insert(new Costo
+            double valor = 0;
+            double.TryParse(txtCosto.Text, out valor);
+
+                costos.Insert(new Costo
             {
-                Valor = Convert.ToDouble(txtCosto.Text),
+                Valor = valor,
                 Fecha = dtpFechaCosto.Value
             });
 
@@ -61,9 +79,18 @@ namespace ConsumoEnergetico
         {
             if (string.IsNullOrEmpty(txtCosto.Text))
             {
-                MessageBox.Show("Verifique el costo de indicador.");
+                MessageBox.Show("El campo 'Costo' es invalido");
                 return false;
             }
+
+            double valor = 0;
+
+            if (!double.TryParse(txtCosto.Text, out valor))
+            {
+                MessageBox.Show("El campo 'Costo' es invalido");
+                return false;
+            }
+
             return true;
         }
 

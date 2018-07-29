@@ -71,5 +71,10 @@ namespace ConsumoEnergetico
 
             return String.Empty;
         }
+
+        public static string FormatIndicador(string indicador)
+        {
+            return indicador[0].ToString().ToUpper() + indicador.Substring(1, indicador.Length - 1);
+        }
     }
 }

@@ -60,10 +60,10 @@
     <Compile Include="Valor\frmEditarValor.Designer.cs">
       <DependentUpon>frmEditarValor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarMedicion.cs">
+    <Compile Include="Mediciones\frmEditarMedicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarMedicion.Designer.cs">
+    <Compile Include="Mediciones\frmEditarMedicion.Designer.cs">
       <DependentUpon>frmEditarMedicion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMedidor.cs">
@@ -80,16 +80,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucConsumo.cs">
+    <Compile Include="Consumo\ucConsumoAnual.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucConsumo.Designer.cs">
-      <DependentUpon>ucConsumo.cs</DependentUpon>
+    <Compile Include="Consumo\ucConsumoAnual.Designer.cs">
+      <DependentUpon>ucConsumoAnual.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucConsumoMensual.cs">
+    <Compile Include="Consumo\ucConsumoMensual.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucConsumoMensual.Designer.cs">
+    <Compile Include="Consumo\ucConsumoMensual.Designer.cs">
       <DependentUpon>ucConsumoMensual.cs</DependentUpon>
     </Compile>
     <Compile Include="ucManual.cs">
@@ -98,10 +98,10 @@
     <Compile Include="ucManual.Designer.cs">
       <DependentUpon>ucManual.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMedicion.cs">
+    <Compile Include="Mediciones\ucMedicion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMedicion.Designer.cs">
+    <Compile Include="Mediciones\ucMedicion.Designer.cs">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Valor\ucValorEnergetico.cs">
@@ -118,7 +118,7 @@
     <EmbeddedResource Include="Valor\frmEditarValor.resx">
       <DependentUpon>frmEditarValor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarMedicion.resx">
+    <EmbeddedResource Include="Mediciones\frmEditarMedicion.resx">
       <DependentUpon>frmEditarMedicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMedidor.resx">
@@ -136,16 +136,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ucConsumo.resx">
-      <DependentUpon>ucConsumo.cs</DependentUpon>
+    <EmbeddedResource Include="Consumo\ucConsumoAnual.resx">
+      <DependentUpon>ucConsumoAnual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucConsumoMensual.resx">
+    <EmbeddedResource Include="Consumo\ucConsumoMensual.resx">
       <DependentUpon>ucConsumoMensual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucManual.resx">
       <DependentUpon>ucManual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucMedicion.resx">
+    <EmbeddedResource Include="Mediciones\ucMedicion.resx">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Valor\ucValorEnergetico.resx">
@@ -177,6 +177,7 @@
     <Content Include="Assets\portada3.png" />
     <Content Include="Assets\portada4.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

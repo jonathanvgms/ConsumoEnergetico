@@ -10,20 +10,20 @@ using System.Windows.Forms;
 using ConsumoEnergetico.Biblioteca;
 using LiteDB;
 
-namespace ConsumoEnergetico
+namespace ConsumoEnergetico.Consumo
 {
-    public partial class ucConsumo : UserControl
+    public partial class ucConsumoAnual : UserControl
     {
         private LiteDatabase db;
         private DataTable consumo;
         private List<string> meses = new List<string> { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" };
 
-        public ucConsumo()
+        public ucConsumoAnual()
         {
             InitializeComponent();
         }
 
-        public ucConsumo(LiteDatabase db)
+        public ucConsumoAnual(LiteDatabase db)
         {
             this.db = db;
             InitializeComponent();
@@ -65,17 +65,23 @@ namespace ConsumoEnergetico
 
         private void ucConsumo_Load(object sender, EventArgs e)
         {
-            chtConsumo.Series.Add("agua");
-            chtConsumo.Series["agua"].Color = Color.SteelBlue;
-            chtConsumo.Series["agua"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chtConsumoAgua.Series.Add("Agua");
+            chtConsumoAgua.Series["Agua"].Color = Color.SteelBlue;
+            chtConsumoAgua.Series["Agua"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chtConsumoAgua.ChartAreas[0].AxisX.Title = "Meses";
+            chtConsumoAgua.ChartAreas[0].AxisY.Title = "M3";
 
-            chtConsumo.Series.Add("electricidad");
-            chtConsumo.Series["electricidad"].Color = Color.Red;
-            chtConsumo.Series["electricidad"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chtConsumoElectricidad.Series.Add("Electricidad");
+            chtConsumoElectricidad.Series["Electricidad"].Color = Color.Red;
+            chtConsumoElectricidad.Series["Electricidad"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chtConsumoElectricidad.ChartAreas[0].AxisX.Title = "Meses";
+            chtConsumoElectricidad.ChartAreas[0].AxisY.Title = "KW";
 
-            chtConsumo.Series.Add("gas");
-            chtConsumo.Series["gas"].Color = Color.DarkGoldenrod;
-            chtConsumo.Series["gas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chtConsumoGas.Series.Add("Gas");
+            chtConsumoGas.Series["Gas"].Color = Color.DarkGoldenrod;
+            chtConsumoGas.Series["Gas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chtConsumoGas.ChartAreas[0].AxisX.Title = "Meses";
+            chtConsumoGas.ChartAreas[0].AxisY.Title = "M3";
 
             ActualizarTabla();
         }
@@ -86,7 +92,7 @@ namespace ConsumoEnergetico
             var mediciones = db.GetCollection<Medicion>(UtilGui.GetStrMediciones(indicador));
 
             DataRow consumoEje = consumo.NewRow();
-            consumoEje["Indicador"] = indicador;
+            consumoEje["Indicador"] = UtilGui.FormatIndicador(indicador);
             
             double totalMensual = 0;
             int m = 1;
@@ -97,7 +103,16 @@ namespace ConsumoEnergetico
                     consumoEje[mes] = totalMensual;
                 else
                     consumoEje[mes] = 0;
-                chtConsumo.Series[indicador].Points.AddXY(mes, consumoEje[mes]);
+                switch (indicador)
+                {
+                    case "agua": chtConsumoAgua.Series[UtilGui.FormatIndicador(indicador)].Points.AddXY(mes, consumoEje[mes]);
+                        break;
+                    case "electricidad": chtConsumoElectricidad.Series[UtilGui.FormatIndicador(indicador)].Points.AddXY(mes, consumoEje[mes]);
+                        break;
+                    case "gas": chtConsumoGas.Series[UtilGui.FormatIndicador(indicador)].Points.AddXY(mes, consumoEje[mes]);
+                        break;
+                }
+               
                 m++;
             }
 
@@ -111,7 +126,17 @@ namespace ConsumoEnergetico
         {
             consumo.Clear();
 
-            foreach (var series in chtConsumo.Series)
+            foreach (var series in chtConsumoAgua.Series)
+            {
+                series.Points.Clear();
+            }
+
+            foreach (var series in chtConsumoElectricidad.Series)
+            {
+                series.Points.Clear();
+            }
+
+            foreach (var series in chtConsumoGas.Series)
             {
                 series.Points.Clear();
             }
@@ -135,6 +160,16 @@ namespace ConsumoEnergetico
         {
             ActualizarTabla();
             ActualizarTotalesIndicadores();
+            ActualizarTotalesDineroConsumo();
+        }
+
+        private void ActualizarTotalesDineroConsumo()
+        {
+            string fechaIncio = "1/1/" + lstAnios.SelectedItem.ToString();
+            string fechaFin = "31/12/" + lstAnios.SelectedItem.ToString();
+            ActualizarTotalDineroConsumo("agua", lblTotalDineroAgua, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
+            ActualizarTotalDineroConsumo("electricidad", lblTotalDineroElectricidad, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
+            ActualizarTotalDineroConsumo("gas", lblTotalDineroGas, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
         }
 
         private void ActualizarTotalesIndicadores()
@@ -143,6 +178,34 @@ namespace ConsumoEnergetico
             lblTotalAgua.Text = db.GetCollection<Medicion>(UtilGui.GetStrMediciones("agua")).FindAll().Where(x => x.Fecha.Year == anio).Sum(x => x.Dato).ToString();
             lblTotalElectricidad.Text = db.GetCollection<Medicion>(UtilGui.GetStrMediciones("electricidad")).FindAll().Where(x => x.Fecha.Year == anio).Sum(x => x.Dato).ToString();
             lblTotalGas.Text = db.GetCollection<Medicion>(UtilGui.GetStrMediciones("gas")).FindAll().Where(x => x.Fecha.Year == anio).Sum(x => x.Dato).ToString();
+        }
+
+        private void ActualizarTotalDineroConsumo(string indicador, Label lblTotalDinero, DateTime fechaComienzo, DateTime fechaFin)
+        {
+            var costos = db.GetCollection<Costo>(UtilGui.GetStrCostos(indicador)).FindAll();
+
+            var mediciones = db.GetCollection<Medicion>(UtilGui.GetStrMediciones(indicador))
+                .Find(x => x.Fecha >= fechaComienzo && x.Fecha <= fechaFin);
+
+            lblTotalDinero.Text = "0";
+
+            var costoPrevio = costos.Where(x => x.Fecha < fechaComienzo).OrderBy(x => x.Fecha).LastOrDefault();
+            if (costoPrevio == null) return;
+            var costosAsociados = costos.Where(x => x.Fecha >= fechaComienzo && x.Fecha < fechaFin).OrderBy(x => x.Fecha);
+            if (costosAsociados == null) return;
+            double totalMedicionParcial, totalCosto = 0; // costoPrevio.Valor * totalMedicionParcial;
+
+            foreach (var c in costosAsociados)
+            {
+                totalMedicionParcial = mediciones.Where(x => x.Fecha >= costoPrevio.Fecha && x.Fecha < c.Fecha).Sum(x => x.Dato);
+                totalCosto += costoPrevio.Valor * totalMedicionParcial;
+                costoPrevio = c;
+            }
+
+            totalMedicionParcial = mediciones.Where(x => x.Fecha >= costoPrevio.Fecha && x.Fecha < fechaFin).Sum(x => x.Dato);
+            totalCosto += costoPrevio.Valor * totalMedicionParcial;
+
+            lblTotalDinero.Text = totalCosto.ToString();
         }
     }
 }
