@@ -164,11 +164,14 @@ namespace ConsumoEnergetico.Consumo
 
         private void ActualizarTotalesDineroConsumo()
         {
-            string fechaIncio = "1/1/" + lstAnios.SelectedItem.ToString();
-            string fechaFin = "31/12/" + lstAnios.SelectedItem.ToString();
-            ActualizarTotalDineroConsumo("agua", lblTotalDineroAgua, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
-            ActualizarTotalDineroConsumo("electricidad", lblTotalDineroElectricidad, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
-            ActualizarTotalDineroConsumo("gas", lblTotalDineroGas, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
+            if (lstAnios.SelectedIndex >= 0)
+            {
+                string fechaIncio = "1/1/" + lstAnios.SelectedItem.ToString();
+                string fechaFin = "31/12/" + lstAnios.SelectedItem.ToString();
+                ActualizarTotalDineroConsumo("agua", lblTotalDineroAgua, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
+                ActualizarTotalDineroConsumo("electricidad", lblTotalDineroElectricidad, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
+                ActualizarTotalDineroConsumo("gas", lblTotalDineroGas, Convert.ToDateTime(fechaIncio), Convert.ToDateTime(fechaFin));
+            }
         }
 
         private void ActualizarTotalesIndicadores()

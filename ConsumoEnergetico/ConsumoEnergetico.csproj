@@ -63,7 +63,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>24_104862.ico</ApplicationIcon>
@@ -129,12 +129,6 @@
     <Compile Include="Consumo\ucConsumoMensual.Designer.cs">
       <DependentUpon>ucConsumoMensual.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucManual.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucManual.Designer.cs">
-      <DependentUpon>ucManual.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mediciones\ucMedicion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,16 +173,12 @@
     <EmbeddedResource Include="Consumo\ucConsumoMensual.resx">
       <DependentUpon>ucConsumoMensual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucManual.resx">
-      <DependentUpon>ucManual.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mediciones\ucMedicion.resx">
       <DependentUpon>ucMedicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Valor\ucValorEnergetico.resx">
       <DependentUpon>ucValorEnergetico.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ConsumoEnergetico_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

@@ -40,27 +40,26 @@
             // 
             // dtpFechaMedicion
             // 
-            this.dtpFechaMedicion.Location = new System.Drawing.Point(88, 23);
-            this.dtpFechaMedicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaMedicion.Location = new System.Drawing.Point(132, 35);
             this.dtpFechaMedicion.Name = "dtpFechaMedicion";
-            this.dtpFechaMedicion.Size = new System.Drawing.Size(214, 20);
+            this.dtpFechaMedicion.Size = new System.Drawing.Size(319, 26);
             this.dtpFechaMedicion.TabIndex = 20;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(46, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 19;
             this.label3.Text = "Fecha";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(169, 118);
+            this.btnGuardar.Location = new System.Drawing.Point(254, 182);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(80, 25);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 38);
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -69,9 +68,10 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(257, 118);
+            this.btnCancelar.Location = new System.Drawing.Point(386, 182);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 25);
+            this.btnCancelar.Size = new System.Drawing.Size(120, 38);
             this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -79,37 +79,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(44, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Consumo";
             // 
             // txtDatoMedicion
             // 
-            this.txtDatoMedicion.Location = new System.Drawing.Point(88, 70);
-            this.txtDatoMedicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDatoMedicion.Location = new System.Drawing.Point(132, 108);
             this.txtDatoMedicion.Name = "txtDatoMedicion";
-            this.txtDatoMedicion.Size = new System.Drawing.Size(141, 20);
+            this.txtDatoMedicion.Size = new System.Drawing.Size(210, 26);
             this.txtDatoMedicion.TabIndex = 21;
             // 
             // lblUnidad
             // 
             this.lblUnidad.AutoSize = true;
-            this.lblUnidad.Location = new System.Drawing.Point(235, 73);
+            this.lblUnidad.Location = new System.Drawing.Point(352, 112);
+            this.lblUnidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnidad.Name = "lblUnidad";
-            this.lblUnidad.Size = new System.Drawing.Size(39, 13);
+            this.lblUnidad.Size = new System.Drawing.Size(52, 20);
             this.lblUnidad.TabIndex = 16;
             this.lblUnidad.Text = "$ / M3";
             // 
             // frmEditarValor
             // 
             this.AcceptButton = this.btnGuardar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(346, 152);
+            this.ClientSize = new System.Drawing.Size(519, 234);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblUnidad);
@@ -118,6 +117,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEditarValor";

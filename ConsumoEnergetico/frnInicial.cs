@@ -81,12 +81,6 @@ namespace ConsumoEnergetico
             frmAcerca.ShowDialog(this);
         }
 
-        private void manualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.pnlPrincipal.Controls.Clear();
-            this.pnlPrincipal.Controls.Add(new ucManual());
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -96,7 +90,7 @@ namespace ConsumoEnergetico
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory(); //"c:\\";
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory(); 
             openFileDialog1.Filter = "Archivo db (*.db)|*.db|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
